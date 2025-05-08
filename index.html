@@ -92,19 +92,42 @@
                     <source src="jjj - copie.mp4" type="video/mp4">
                 </video><br>
         </section>
+<section id="contact">
+    <h2>Contacte-moi</h2>
+    <form id="contactForm" action="https://formsubmit.co/jeannengbo3@gmail.com" method="POST">
+        <input type="text" name="name" placeholder="Nom" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <textarea name="message" placeholder="Ton message..." required></textarea>
 
-        <!-- Section Contact -->
-<form action="https://formsubmit.co/jeannengbo3@gmail.com" method="POST">
-    <input type="text" name="name" placeholder="Nom" required>
-    <input type="email" name="email" placeholder="Email" required>
-    <textarea name="message" placeholder="Ton message..." required></textarea>
-    <button type="submit">Envoyer</button>
-</form>
+        <!-- Champs cachés -->
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_autoresponse" value="Merci pour ton message ! Je l’ai bien reçu. - Jeanne">
+        <input type="hidden" name="_next" value="#confirmation">
+
+        <button type="submit">Envoyer</button>
+    </form>
+
+    <!-- Message de confirmation caché au début -->
+    <div id="confirmation" style="display: none; margin-top: 20px;">
+        <h3>Merci pour votre message !</h3>
+        <p>Je l’ai bien reçu et je vous répondrai bientôt.</p>
+    </div>
+</section>
         <footer>
             <p>@2025 Jeanne Ngbo. Tous droits réservés.</p>
         </footer>
 
         <!-- Lien vers le script JavaScript -->
-        <script src="script.js"></script>
+        <script src="script.js"> <script>
+    const form = document.getElementById('contactForm');
+    const confirmation = document.getElementById('confirmation');
+
+    form.addEventListener('submit', function (e) {
+        setTimeout(() => {
+            form.style.display = 'none';
+            confirmation.style.display = 'block';
+        }, 1000); // délai pour laisser le formulaire partir
+    });
+</script></script>
     </body>
 </html>
