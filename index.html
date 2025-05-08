@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Jeanne Ngbo</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <div class="container">
+                    <a href="index.html" class="logo"><span></span></a>
+                    <ul>
+                        <li><a href="#apropos">A propos</a></li>
+                        <li><a href="#projet">Projet</a></li>
+                        <li><a href="#galerie">Galerie</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                    <div class="burger">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="hero">
+                <h2>Jeanne Ngbo</h2>
+                <p>Etudiante en science informatique</p>
+                <q>"Avec Dieu, rien n'est impossible."</q>
+
+                <!-- Message de bienvenue -->
+                <p id="welcomeMessage"></p> <!-- Le message de bienvenue s'affichera ici avec l'animation -->
+                
+                <a href="#apropos" class="btn">A propos</a>
+            </div>
+        </header> 
+
+        <!-- Section A propos -->
+        <section id="apropos">
+            <h2>A propos</h2>
+            <p>Je suis étudiante passionnée par l'informatique, le web et la technologie au service de l'humain.</p> 
+        </section>   
+
+        <!-- Section Projet -->
+        <section id="projet">
+            <h2>Mes projets</h2>
+            <ul>
+                <li>Site d'aide humanitaire pour les enfants et veuves sans-abris</li>
+                <li>Gestion de présence en Python</li>
+                <li>Création de cours en ligne grâce à HTML et CSS</li><br>
+
+                <h3>Exemple de mon projet d'aide aux enfants et veuves déjà réalisé</h3>
+                <video controls>
+                    <source src="jj.mp4" type="video/mp4">
+                </video><br>
+                <a href="#">Lire la suite</a>
+            </ul> 
+        </section> 
+
+        <!-- Section Galerie -->
+        <section id="galerie">
+            <h2>Galerie</h2>
+            <div class="gallery-grid">
+                <img src="action1.jpg" alt="action1.jpg">
+            </div>
+        </section>
+
+        <!-- Section Blog -->
+        <section id="blog">
+            <h2>Blog</h2>
+            <article class="post">
+                <h3>Bienvenue sur mon blog</h3>
+                <p>Ici, je partage mes tutoriels, projets, et pensées sur l'informatique, le design et la vie d'étudiante.</p>
+                <a href="#">Lire la suite</a>
+            </article>
+            <article class="post">
+                <h3>OBS Studio: mes astuces pour enregistrer des tutoriels</h3>
+                <p>Voici mes conseils pour bien utiliser OBS Studio pour enregistrer des cours ou faire des vidéos YouTube.</p>
+                <a href="#">Lire la suite</a>  
+            </article>
+            <article class="post">
+                <h3>Introduction à HTML</h3>
+                <h3>1. Définition</h3>
+                <p>HTML (HyperText Markup Language) est le langage de base utilisé pour créer des pages web. Il structure le contenu en utilisant des balises.</p>
+                <h3>1. Structure de base d'une page HTML</h3>
+                <p>!DOCTYPE html : Indique au navigateur que le document est en HTML5.<br>HTML : Conteneur principal de la page.<br>Head : Contient les métadonnées, comme le titre et les liens vers les fichiers CSS.<br>Body : Contient tout le contenu visible de la page.</p>
+                <a href="#">Lire la suite</a> 
+            </article>
+              <h3>Exemple en vidéo de la première partie de notre cours d'introduction à HTML</h3>
+                <video controls>
+                    <source src="jjj.mp4" type="video/mp4">
+                </video><br>
+        </section>
+
+        <!-- Section Contact -->
+        <section id="contact">
+            <h2>Contacte-moi</h2>
+            <form>
+                <input type="text" placeholder="Nom" required>
+                <input type="mail" placeholder="Email" required>
+                <textarea placeholder="Ton message..." required></textarea>
+                <button type="submit">Envoyer</button>
+            </form> 
+        </section>
+
+        <footer>
+            <p>@2025 Jeanne Ngbo. Tous droits réservés.</p>
+        </footer>
+
+        <!-- Lien vers le script JavaScript -->
+        <script src="script.js"></script>
+    </body>
+</html>
