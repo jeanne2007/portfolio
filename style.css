@@ -173,8 +173,8 @@ main {
 }
 
 video {
-    width: 60%;
-    max-width: 60%;
+    width: 80%;
+    max-width: 80%;
     height: auto;
     border-radius: 8px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
