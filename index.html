@@ -1,111 +1,94 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Jeanne Ngbo</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> <!-- pour icônes burger -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jeanne Ngbo</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="container">
-                <a href="#" class="logo">Jeanne<span class="logo-highlight">Ngbo</span></a>
-                <div class="burger">
-                    <i class="fas fa-bars"></i>
-                </div>
-                <ul class="nav-links">
-                    <li><a href="#apropos" class="nav-link active">A propos</a></li>
-                    <li><a href="#projet" class="nav-link">Projet</a></li>
-                    <li><a href="#galerie" class="nav-link">Galerie</a></li>
-                    <li><a href="#blog" class="nav-link">Blog</a></li>
-                    <li><a href="#contact" class="nav-link">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-
-        <div class="hero">
-            <p>Étudiante en science informatique</p>
-            <q>"Avec Dieu, rien n'est impossible."</q>
-            <p id="welcomeMessage"></p>
-            <a href="#apropos" class="btn btn-primary">A propos</a>
+  <header>
+    <nav class="navbar">
+      <div class="container">
+        <a href="#" class="logo">Jeanne<span class="logo-highlight">Gaule</span></a>
+        <div class="burger">
+          <i class="fas fa-bars"></i>
         </div>
-    </header>
+        <ul class="nav-links">
+          <li><a href="#apropos" class="nav-link active">A propos</a></li>
+          <li><a href="#projet" class="nav-link">Projet</a></li>
+          <li><a href="#galerie" class="nav-link">Galerie</a></li>
+          <li><a href="#blog" class="nav-link">Blog</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
 
-    <main>
-        <section id="apropos" class="section active">
-            <h2>A propos</h2>
-            <p>Je suis étudiante passionnée par l'informatique, le web et la technologie au service de l'humain.</p>
-        </section>
+    <div class="hero">
+      <p>Étudiante en science informatique</p>
+      <q>"Avec Dieu, rien n'est impossible."</q>
+      <p id="welcomeMessage"></p>
+      <a href="#apropos" class="btn btn-primary">A propos</a>
+    </div>
+  </header>
 
-        <section id="projet" class="section">
-            <h2>Mes projets</h2>
-            <ul>
-                <li>Site d'aide humanitaire pour les enfants et veuves sans-abris</li>
-                <li>Gestion de présence en Python</li>
-                <li>Création de cours en ligne grâce à HTML et CSS</li>
-            </ul>
-            <h3>Exemple de mon projet d'aide aux enfants et veuves déjà réalisé</h3>
-            <video controls>
-                <source src="jjj.mp4" type="video/mp4" />
-                Votre navigateur ne supporte pas la vidéo.
-            </video>
-            <br />
-            <a href="#" class="btn btn-secondary">Lire la suite</a>
-        </section>
+  <main>
+    <section id="apropos" class="section">
+      <h2>A propos</h2>
+      <p>Je suis étudiante passionnée par l'informatique, le web et la technologie au service de l'humain.</p>
+    </section>
 
-        <section id="galerie" class="section">
-            <h2>Galerie</h2>
-            <div class="gallery-grid">
-                <img src="pr.jpg" alt="Action 1" />
-                <img src="s.jpg" alt="Action 2" />
-                <img src="T.jpg" alt="Action 3" />
-            </div>
-        </section>
+    <section id="projet" class="section">
+      <h2>Mes projets</h2>
+      <ul>
+        <li>Site d'aide humanitaire pour les enfants et veuves sans-abris</li>
+        <li>Gestion de présence en Python</li>
+        <li>Création de cours en ligne grâce à HTML et CSS</li>
+      </ul>
+      <h3>Exemple de mon projet d'aide aux enfants et veuves déjà réalisé</h3>
+      <video controls>
+        <source src="jjj.mp4" type="video/mp4" />
+        Votre navigateur ne supporte pas la vidéo.
+      </video>
+    </section>
 
-        <section id="blog" class="section">
-            <h2>Blog</h2>
-            <article class="post">
-                <h3>Bienvenue sur mon blog</h3>
-                <p>Ici, je partage mes tutoriels, projets, et pensées sur l'informatique, le design et la vie d'étudiante.</p>
-                <a href="#" class="btn btn-secondary">Lire la suite</a>
-            </article>
-            <article class="post">
-                <h3>OBS Studio: mes astuces pour enregistrer des tutoriels</h3>
-                <p>Voici mes conseils pour bien utiliser OBS Studio pour enregistrer des cours ou faire des vidéos YouTube.</p>
-                <a href="#" class="btn btn-secondary">Lire la suite</a>
-            </article>
-            <article class="post">
-                <h3>Introduction à HTML</h3>
-                <h4>1. Définition</h4>
-                <p>HTML (HyperText Markup Language) est le langage de base utilisé pour créer des pages web. Il structure le contenu en utilisant des balises.</p>
-                <h4>2. Structure de base d'une page HTML</h4>
-                <p>
-                    !DOCTYPE html : Indique au navigateur que le document est en HTML5.<br />
-                    HTML : Conteneur principal de la page.<br />
-                    Head : Contient les métadonnées, comme le titre et les liens vers les fichiers CSS.<br />
-                    Body : Contient tout le contenu visible de la page.
-                </p>
-                <a href="#" class="btn btn-secondary">Lire la suite</a>
-            </article>
-        </section>
+    <section id="galerie" class="section">
+      <h2>Galerie</h2>
+      <div class="gallery-grid">
+        <img src="pr.jpg" alt="Action 1" />
+        <img src="s.jpg" alt="Action 2" />
+        <img src="T.jpg" alt="Action 3" />
+      </div>
+    </section>
 
-        <section id="contact" class="section">
-            <h2>Contacte-moi</h2>
-            <form action="https://formspree.io/f/mayvlyye" method="POST">
-                <input type="text" name="nom" placeholder="Nom" required />
-                <input type="email" name="email" placeholder="Email" required />
-                <textarea name="message" placeholder="Ton message..." required></textarea>
-                <button type="submit" class="btn btn-primary">Envoyer</button>
-            </form>
-        </section>
-    </main>
+    <section id="blog" class="section">
+      <h2>Blog</h2>
+      <article class="post">
+        <h3>Bienvenue sur mon blog</h3>
+        <p>Ici, je partage mes tutoriels, projets, et pensées sur l'informatique, le design et la vie d'étudiante.</p>
+      </article>
+      <article class="post">
+        <h3>OBS Studio: mes astuces pour enregistrer des tutoriels</h3>
+        <p>Voici mes conseils pour bien utiliser OBS Studio pour enregistrer des cours ou faire des vidéos YouTube.</p>
+      </article>
+    </section>
 
-    <footer>
-        <p>&copy; 2025 Jeanne Ngbo. Tous droits réservés.</p>
-    </footer>
+    <section id="contact" class="section">
+      <h2>Contacte-moi</h2>
+      <form action="https://formspree.io/f/mayvlyye" method="POST">
+        <input type="text" name="nom" placeholder="Nom" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <textarea name="message" placeholder="Ton message..." required></textarea>
+        <button type="submit" class="btn btn-primary">Envoyer</button>
+      </form>
+    </section>
+  </main>
 
-    <script src="script.js"></script>
+  <footer>
+    <p>&copy; 2025 Jeanne-Gaule. Tous droits réservés.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
