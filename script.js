@@ -1,56 +1,44 @@
-
-// Animation message bienvenue
+// Animation message de bienvenue
 function typeWriter(elementId, text, i = 0) {
-  if (i < text.length) {
-    document.getElementById(elementId).innerHTML += text.charAt(i);
-    setTimeout(function () {
-      typeWriter(elementId, text, i + 1);
-    }, 50);
-  }
+    if (i < text.length) {
+        document.getElementById(elementId).innerHTML += text.charAt(i);
+        setTimeout(() => typeWriter(elementId, text, i + 1), 50);
+    }
 }
 
-window.addEventListener("load", function () {
-  const welcomeText =
-    "Bienvenue sur le site de Jeanne Ngbo, une passionnée d'informatique et de technologie, ici pour partager ses projets, tutoriels et idées. Explorez mon univers numérique et rejoignez-moi dans l'aventure !";
-
-  typeWriter("welcomeMessage", welcomeText, 0);
+window.addEventListener('load', () => {
+    const welcomeText = "Bienvenue sur le site de Jeanne Ngbo, une passionnée d'informatique et de technologie, ici pour partager ses projets, tutoriels et idées. Explorez mon univers numérique et rejoignez-moi dans l'aventure !";
+    typeWriter('welcomeMessage', welcomeText);
 });
 
-// Navigation - Afficher une seule section à la fois
-const navLinks = document.querySelectorAll(".nav-link");
-const sections = document.querySelectorAll("section");
+// Navigation menu mobile toggle
+const burger = document.querySelector('.burger');
+const navLinks = document.querySelector('.nav-links');
+const navLinkItems = document.querySelectorAll('.nav-link');
 
-navLinks.forEach((link) => {
-  link.addEventListener("click", (e) => {
-    e.preventDefault();
-
-    // Enlever active de tous les liens
-    navLinks.forEach((lnk) => lnk.classList.remove("active"));
-
-    // Ajouter active au lien cliqué
-    link.classList.add("active");
-
-    // Masquer toutes les sections
-    sections.forEach((sec) => sec.classList.remove("active-section"));
-
-    // Afficher la section correspondante
-    const targetId = link.getAttribute("href").substring(1);
-    const targetSection = document.getElementById(targetId);
-    if (targetSection) {
-      targetSection.classList.add("active-section");
-    }
-
-    // Si menu burger ouvert, fermer
-    if (navLinksContainer.classList.contains("open")) {
-      navLinksContainer.classList.remove("open");
-    }
-  });
+burger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
 });
 
-// Burger menu toggle
-const burger = document.querySelector(".burger");
-const navLinksContainer = document.querySelector(".nav-links");
+// Afficher une seule section à la fois
+navLinkItems.forEach(link => {
+    link.addEventListener('click', e => {
+        e.preventDefault();
 
-burger.addEventListener("click", () => {
-  navLinksContainer.classList.toggle("open");
+        // Fermer menu mobile s'il est ouvert
+        if(navLinks.classList.contains('active')){
+            navLinks.classList.remove('active');
+        }
+
+        // Gérer les liens actifs
+        navLinkItems.forEach(lnk => lnk.classList.remove('active'));
+        link.classList.add('active');
+
+        // Afficher la section correspondante, cacher les autres
+        const targetId = link.getAttribute('href').substring(1);
+        document.querySelectorAll('.section').forEach(sec => {
+            sec.classList.remove('active');
+        });
+        document.getElementById(targetId).classList.add('active');
+    });
 });
