@@ -4,13 +4,14 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 section {
   display: none;
 }
-
 section#apropos {
   display: block;
 }
+
 body, html {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
@@ -27,6 +28,7 @@ body, html {
     top: 0;
     z-index: 1000;
 }
+
 .container {
     max-width: 1100px;
     margin: 0 auto;
@@ -35,6 +37,7 @@ body, html {
     align-items: center;
     justify-content: space-between;
 }
+
 .logo {
     font-weight: 900;
     font-size: 1.8rem;
@@ -42,22 +45,26 @@ body, html {
     color: white;
     user-select: none;
 }
+
 .logo-highlight {
     background: linear-gradient(45deg, #e66465, #9198e5);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
 .nav-links {
     list-style: none;
     display: flex;
     gap: 25px;
 }
+
 .nav-links li a {
     color: white;
     text-decoration: none;
     font-weight: 600;
     transition: color 0.3s ease;
 }
+
 .nav-links li a:hover,
 .nav-links li a.active {
     color: #e66465;
@@ -68,23 +75,25 @@ body, html {
     display: none;
     cursor: pointer;
 }
+
 .burger i {
     font-size: 1.8rem;
     color: white;
 }
+
 nav ul {
-  display: flex;
-  gap: 20px;
+    display: flex;
+    gap: 20px;
 }
 
 @media (max-width: 768px) {
-  nav ul {
-    display: none;
-    flex-direction: column;
-  }
-  nav ul.active {
-    display: flex;
-  }
+    nav ul {
+        display: none;
+        flex-direction: column;
+    }
+    nav ul.active {
+        display: flex;
+    }
 }
 
 /* Hero section */
@@ -99,15 +108,18 @@ nav ul {
     text-align: center;
     padding: 0 20px;
 }
+
 .hero h2 {
     font-size: 3rem;
     margin-bottom: 0.5rem;
     user-select: none;
 }
+
 .hero p {
     font-size: 1.3rem;
     margin-bottom: 0.3rem;
 }
+
 .hero q {
     font-style: italic;
     font-size: 1.1rem;
@@ -123,18 +135,22 @@ nav ul {
     display: inline-block;
     transition: background-color 0.3s ease;
 }
+
 .btn-primary {
     background-color: #e66465;
     color: white;
 }
+
 .btn-primary:hover {
     background-color: #c74c51;
 }
+
 .btn-secondary {
     background-color: transparent;
     color: #4b79a1;
     border: 2px solid #4b79a1;
 }
+
 .btn-secondary:hover {
     background-color: #4b79a1;
     color: white;
@@ -146,13 +162,16 @@ main {
     margin: 40px auto;
     padding: 0 20px;
 }
+
 .section {
     display: none;
     animation: fadeIn 0.5s ease forwards;
 }
+
 .section.active {
     display: block;
 }
+
 video {
     width: 60%;
     max-width: 60%;
@@ -161,27 +180,32 @@ video {
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
     margin-bottom: 20px;
 }
+
 h2 {
     color: #4b79a1;
     margin-bottom: 20px;
 }
+
 ul {
     list-style-type: disc;
     padding-left: 20px;
     margin-bottom: 20px;
 }
+
+/* Galerie */
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 15px;
 }
+
 .gallery-grid img {
     width: 100%;
     border-radius: 8px;
     box-shadow: 0 3px 8px rgba(0,0,0,0.2);
 }
 
-/* Blog posts */
+/* Blog */
 .post {
     background: #fefefe;
     border-left: 5px solid #4b79a1;
@@ -190,17 +214,19 @@ ul {
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.15);
 }
+
 .post h3 {
     margin-bottom: 10px;
 }
 
-/* Form */
+/* Formulaire */
 form {
     display: flex;
     flex-direction: column;
     gap: 12px;
     max-width: 500px;
 }
+
 input, textarea {
     padding: 12px;
     border: 1px solid #ccc;
@@ -208,6 +234,7 @@ input, textarea {
     font-size: 1rem;
     resize: vertical;
 }
+
 button[type="submit"] {
     background-color: #4b79a1;
     color: white;
@@ -218,6 +245,7 @@ button[type="submit"] {
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
+
 button[type="submit"]:hover {
     background-color: #3a5a7a;
 }
@@ -239,7 +267,6 @@ footer {
 }
 
 /* Responsive */
-
 @media screen and (max-width: 768px) {
     .nav-links {
         position: fixed;
@@ -256,12 +283,15 @@ footer {
         transition: right 0.3s ease;
         z-index: 999;
     }
+
     .nav-links.active {
         right: 0;
     }
+
     .burger {
         display: block;
     }
+
     main {
         margin: 80px 20px 20px 20px;
     }
