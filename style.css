@@ -1,168 +1,275 @@
 
-  /* Style général de mon site */
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing:border-box;
-  }
-  
-  body, html {
-    font-family:Arial, sans-serif;
-    line-height: 1.6;
-    color:#333;
-    background-color:white;
-    height: 100%;
-  }
-  
-  header {
-    background-color: #333;
-    color: #333;
-    text-align:center;
-    position: relative;
-  }
-  
-  nav {
-    display: flex;
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: white;
+  height: 100%;
+}
+
+header {
+  background-color: #4b79a1;
+  color: #fff;
+  text-align: center;
+  position: relative;
+}
+
+/* Navbar */
+.navbar .container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo span {
+  font-weight: 900;
+  font-size: 1.7rem;
+  background: linear-gradient(45deg, #4b79a1, #283e51);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color:#fff;
+  cursor: pointer;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 5px 0;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+.nav-links li a:hover,
+.nav-links li a.active {
+  border-bottom: 2px solid #f9d342;
+}
+
+
+/* Burger menu - hidden on desktop */
+.burger {
+  display: none;
+  cursor: pointer;
+  font-size: 1.8rem;
+  color: white;
+}
+
+.hero {
+  height: 169vh;
+  background-image: url('faiza.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+  position: relative;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 1.3rem;
+}
+
+.hero q {
+  display: block;
+  font-style: italic;
+  margin: 10px 0;
+  font-size: 1.2rem;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 25px;
+  background-color: #4b79a1;
+  color: #283e51;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #e6c830;
+}
+
+/* Sections */
+section {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: auto;
+  display: none;
+}
+
+section.active-section {
+  display: block;
+}
+
+h2 {
+  margin-bottom: 25px;
+  color: #4b79a1;
+  font-weight: 700;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
+  object-fit: cover;
+  height: 150px;
+}
+
+.post {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-left: 5px solid #4b79a1;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+}
+
+.post h3 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.post p {
+  margin-bottom: 10px;
+}
+
+.post a {
+  color: #347eac;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin: auto;
+}
+
+input,
+textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+button {
+  padding: 12px;
+  background-color: #4b79a1;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #3a6186;
+}
+
+footer {
+  background-color: #283e51;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    background-color: #4b79a1;
     flex-direction: column;
-    align-items: center;
-    padding: 20px 0;
+    width: 200px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    padding-top: 60px;
+    gap: 30px;
+    z-index: 10;
   }
-  
-  nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    margin-top: 10px;
+
+  .nav-links.open {
+    transform: translateX(0);
   }
-  
-  nav a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
+
+  .burger {
+    display: block;
   }
-  
-  .hero {
-    height: 160vh;
-    background-image: url('faiza.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-align: center;
-    padding: 100px 20px;
-    position: relative;
-  }
-  
-  .hero h2 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-  }
-  
-  .hero p {
+
+  .nav-links li a {
     font-size: 1.2rem;
   }
-  
+
+  header {
+    padding-bottom: 20px;
+  }
+
+  .hero {
+    height: 60vh;
+    padding: 60px 15px;
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .hero p,
   .hero q {
-    display: block;
-    font-style: italic;
-    margin: 10px 0;
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
-  
-  .btn {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 10px 20px;
-    background-color: #fff;
-    color:#4b79a1;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-  }
-  
-  section {
-    padding: 40px 20px;
-    max-width: 1000px;
-    margin: auto;
-  }
-  
-  h2 {
-    margin-bottom: 20px;
-    color:  #4b79a1;
-  }
-  
-  .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
-  }
-  
+
   .gallery-grid img {
-    width: 100%;
-    border-radius: 10px;
-    box-shadow:0 4px 8px rgb(0, 0, 0.1);
+    height: 120px;
   }
-  
-  .post {
-    background-color: #fff;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-left: 5px solid #4b79a1;
-    box-shadow: 0 2px 5px  rgba(0, 0, 0, 0.5);
-    border-radius: 8px;
-  }
-  
-  .post h3 {
-    margin-bottom: 10px;
-    color: #333;
-  }
-  
-  .post p {
-    margin-bottom: 10px;
-  }
-  
-  .post a {
-    color: #347eac;
-    text-decoration: underline;
-    font-weight: bold;
-  }
-  
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  input, textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  button {
-    padding: 10px;
-    background-color:#4b79a1;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 40px;
-  }
-  
-  video {
-    width: 90%;
-    max-width: 600px;
-    border-radius: 10px;
-    text-align: center;
-  }
+}
