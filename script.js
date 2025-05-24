@@ -18,6 +18,45 @@ const navLinkItems = document.querySelectorAll('.nav-link');
 
 burger.addEventListener('click', () => {
     navLinks.classList.toggle('active');
+    // Récupère le menu burger et la liste
+const burger = document.querySelector('.burger');
+const menu = document.querySelector('nav ul');
+const links = document.querySelectorAll('nav ul li a');
+const sections = document.querySelectorAll('section');
+
+// Ouvre/ferme le menu burger au clic sur l'icône
+burger.addEventListener('click', () => {
+  menu.classList.toggle('active');
+});
+
+// Au clic sur un lien du menu
+links.forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault(); // Empêche le scroll automatique
+
+    // Ferme le menu burger si ouvert (utile sur mobile)
+    menu.classList.remove('active');
+
+    // Récupère l'id de la section ciblée via href (ex: #apropos)
+    const targetId = link.getAttribute('href').substring(1);
+
+    // Cache toutes les sections
+    sections.forEach(section => section.style.display = 'none');
+
+    // Affiche la section ciblée
+    const targetSection = document.getElementById(targetId);
+    if (targetSection) {
+      targetSection.style.display = 'block';
+    }
+  });
+});
+
+// Optionnel : Afficher par défaut la section 'apropos'
+window.addEventListener('load', () => {
+  sections.forEach(section => section.style.display = 'none');
+  const defaultSection = document.getElementById('apropos');
+  if (defaultSection) defaultSection.style.display = 'block';
+});
 });
 
 // Afficher une seule section à la fois
