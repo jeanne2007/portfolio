@@ -8,15 +8,21 @@ function typeWriter(elementId, text, i = 0) {
 
 window.addEventListener('load', () => {
   const welcomeText = "Bienvenue sur le site de Jeanne Ngbo, une passionnée d'informatique et de technologie, ici pour partager ses projets, tutoriels et idées. Explorez mon univers numérique et rejoignez-moi dans l'aventure !";
-  typeWriter('welcomeMessage', welcomeText, 0);
+  typeWriter('welcomeMessage', welcomeText);
 });
 
-// Gestion menu burger et affichage sections
 document.addEventListener('DOMContentLoaded', () => {
   const burger = document.querySelector('.burger');
-  const menu = document.querySelector('nav ul');
-  const links = document.querySelectorAll('nav ul li a');
+  const menu = document.querySelector('.nav-links');
+  const links = document.querySelectorAll('.nav-link');
   const sections = document.querySelectorAll('section');
+
+  // Cacher toutes les sections au départ
+  sections.forEach(section => section.style.display = 'none');
+
+  // Afficher la section "A propos" par défaut
+  const defaultSection = document.getElementById('apropos');
+  if (defaultSection) defaultSection.style.display = 'block';
 
   burger.addEventListener('click', () => {
     menu.classList.toggle('active');
@@ -25,12 +31,9 @@ document.addEventListener('DOMContentLoaded', () => {
   links.forEach(link => {
     link.addEventListener('click', e => {
       e.preventDefault();
-
       menu.classList.remove('active');
 
-      sections.forEach(section => {
-        section.style.display = 'none';
-      });
+      sections.forEach(section => section.style.display = 'none');
 
       const targetId = link.getAttribute('href').substring(1);
       const targetSection = document.getElementById(targetId);
