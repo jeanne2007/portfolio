@@ -4,6 +4,13 @@
     padding: 0;
     box-sizing: border-box;
 }
+section {
+  display: none;
+}
+
+section#apropos {
+  display: block;
+}
 body, html {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
@@ -64,6 +71,20 @@ body, html {
 .burger i {
     font-size: 1.8rem;
     color: white;
+}
+nav ul {
+  display: flex;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+  }
+  nav ul.active {
+    display: flex;
+  }
 }
 
 /* Hero section */
