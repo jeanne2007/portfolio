@@ -1,16 +1,5 @@
 // Animation texte bienvenue
 function typeWriter(elementId, text, i = 0) {
-  if (i < text.length) {
-    document.getElementById(elementId).innerHTML += text.charAt(i);
-    setTimeout(() => typeWriter(elementId, text, i + 1), 100);
-  }
-}
-
-window.addEventListener('load', () => {
-  const welcomeText = "Bienvenue sur le site de Jeanne Ngbo, une passionnée d'informatique et de technologie, ici pour partager ses projets, tutoriels et idées. Explorez mon univers numérique et rejoignez-moi dans l'aventure !";
-  typeWriter('welcomeMessage', welcomeText);
-});
-
 document.addEventListener('DOMContentLoaded', () => {
   const burger = document.querySelector('.burger');
   const menu = document.querySelector('.nav-links');
